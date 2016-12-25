@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flight delays by Raju Nanduri October 2016</title>
+
+	<!-- Import the layouts-->
+	<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+
+	<!-- Import d3 from local. TBD: change to web once finised-->
+	<script src="js/d3.v3.min.js"></script>
+
+	<script src="js/parse.js">
+		//Routines to proces the data from file
+	</script>
+	<script src="js/draw.js">
+		//Routines to compute and render the data
+	</script>
+
+</head>
+
+<body>
+	<h3> </h3> <!--Placeholder for chart title -->
+	<div id="flightviz">
+		<script type="text/javascript">
+
+			//file = "data/2008 sample.csv"
+			//file = "data/2008.csv"
+			file = "data/flights by month.csv"
+			
+			d3.csv(file, parse, draw)
+		</script>
+	</div>
+	<p class="axis"> 
+		<text style="font-size: 9px"> Version: Iteration 1 Author Driven Narrative - Initial </text>
+	</p>
+</body>
+</html>

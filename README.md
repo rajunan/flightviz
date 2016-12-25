@@ -44,7 +44,7 @@ I gathered feedback from three different people with varying knowledge and expos
 -- *Data*: One user wanted to also see total number of delays as a trend compared to average delay.
 
 - Feedback Iteration 1 AuthorDriven Narrative - Final
--- TBD
+-- Apart from the legend which I will be integrating with the viewer driven narrative my reviwers did not have any futher inputs beyond the suggested changes.
 
 - Feedback Iteration 2 Viewer Driven Narrative - Initial:
 -- TBD

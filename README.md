@@ -47,12 +47,15 @@ I gathered feedback from three different people with varying knowledge and expos
 -- Apart from the legend which I will be integrating with the viewer driven narrative my reviwers did not have any futher inputs beyond the suggested changes.
 
 - Feedback Iteration 2 Viewer Driven Narrative - Initial:
--- TBD
+-- Overall the ability to interact with the graphics was observed as a very ygood addition and made it more interesting for viewers
+-- *Viewer menu*: One reviewer did not intuitely try out the checkboxes. Added heading accordingly
+-- No other feedback or changes/updates were requested
 
 - Feedback Iteration 3 Final Final:
 -- TBD
 
 **Resources**
-[Flights data](http://stat-computing.org/dataexpo/2009/the-data.html)
-[D3 aninmations](http://www.jeromecukier.net/blog/2012/07/16/animations-and-transitions/)
-[D3 bind, update and exit](https://medium.com/@c_behrens/enter-update-exit-6cafc6014c36#.jui47gxej)
+[Flights data](http://stat-computing.org/dataexpo/2009/the-data.html)<br>
+[D3 aninmations](http://www.jeromecukier.net/blog/2012/07/16/animations-and-transitions/)<br>
+[D3 bind, update and exit](https://medium.com/@c_behrens/enter-update-exit-6cafc6014c36#.jui47gxej)<br>
+[Color shades](http://www.w3schools.com/colors/colors_picker.asp)

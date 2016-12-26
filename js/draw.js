@@ -1,10 +1,10 @@
 function draw(data) {
 
-	//Set key parameters, prepare chart layouts and draw viewport basics *************************************************************************** 
+	//Set key parameters ******************************************************************************************************************* 
 		//SVG main chart
 		var width = 600, //height of view port
 			height = 500, //width of view port
-			margin = {top: 60, right: 20, bottom: 40, left: 40, yearTitleSuffix: 90};
+			margin = {top: 60, right: 20, bottom: 40, left: 40, yearTitleSuffix: width/2-100};
 		//SVG viewer menu
 		var viewermenu_coord = {
 				width: 250, height: height,
@@ -24,7 +24,12 @@ function draw(data) {
             y = d3.scale.linear()
             		.domain(yDomain)
                     .range([height-margin.bottom, margin.top]); //Given SVG goes top to bottom flip the range to realign bottom to top
-   		//Create div structure and SVG viewport for main chart
+       	//Set chart title
+		var chartTitleLabel = "Average Departure Delays at US airports",
+			yearTitlePrefix = "Year on Year trends",
+			yearTitleDelim = "  ";
+
+   	//Create div structures, SVG viewports, Axis  ******************************************************************************************
 	   	//http://stackoverflow.com/questions/2637696/how-to-place-div-side-by-side
    		var main_container = d3.select('#div_main')
    				.style('width', width + viewermenu_coord.width+"px") .style('height', height+"px")
@@ -110,10 +115,6 @@ function draw(data) {
 				.attr('x2',x(quarter)).attr('y2',y(avgDelayMax));
 		}
 		quarterSep(3); quarterSep(6); quarterSep(9); quarterSep(12);
-		//Set chart title
-		var chartTitleLabel = "Average Departure Delays at US airports",
-			yearTitlePrefix = "Year on Year trends",
-			yearTitleDelim = " : ";
 		//Draw static parts of the title
 		svg.append("g")
 			.attr("class","chartTitle")
@@ -133,7 +134,7 @@ function draw(data) {
 		var depDelayByYears = d3.nest()
 			.key( function(d) {return d['Year'];} )
 			.entries(data);
-
+	
 	//Prepare chart objects ************************************************************************************************************************
     	var years = [], //all years in dataset
     		baseColor = {//Color code each year by shading from a base color by decade
@@ -148,10 +149,9 @@ function draw(data) {
     		.interpolate('basis');
     	// For each year draw trend line and set title
     		svg.append("g").attr("class","year");
-    		var _y = "2000", rgb_R = baseColor[_y][0], rgb_G = baseColor[_y][1], rgb_B = baseColor[_y][2]; 
+    		var _y = "1980", rgb_R = baseColor[_y][0], rgb_G = baseColor[_y][1], rgb_B = baseColor[_y][2]; 
 			depDelayByYears.forEach(
 				function(yearObj) {
-					debugger;
 					years.push(yearObj.key); //new year to add to data
 					if (baseColor[yearObj.key]) {
 						rgb_R = baseColor[yearObj.key][0], rgb_G = baseColor[yearObj.key][1], rgb_B = baseColor[yearObj.key][2];
@@ -187,8 +187,6 @@ function draw(data) {
 				.style("opacity",0);
 		}
 
-		debugger;
-
 	// Author driven narrative *****************************************************************************************************************
 		var i=0;
 		svg.selectAll('#_' + years[i])
@@ -196,7 +194,6 @@ function draw(data) {
 	   	var interval = setInterval(function() {
 	   		i++;
 	   		if (i < years.length) {
-	   			debugger;
 	   			hideYear(years[i-1],1000); //Hide past year 
    				showYear(years[i], 1000); //Update new year
 	   		}
@@ -216,7 +213,7 @@ function draw(data) {
 			checkboxAllRow = checkboxGrid.append('tr'),
 			checkboxNoneRow = checkboxGrid.append('tr');
 		//Draw checkbox title
-		checkboxTitleRow.append('td').attr('colspan',3).text('Select / Deselect years:');
+		checkboxTitleRow.append('td').attr('colspan',3).text('Select / Deselect years:').style('font-weight','bold');
 		//Draw checkboxes and label for each year
 	   	function checkboxYearsSetup(decadeTable, decadeStart) {
 	   		for (y=decadeStart; y < decadeStart+10; y++) {
@@ -252,12 +249,11 @@ function draw(data) {
 			.attr('id','cb_All')
 			.attr('type','button')
 			.on('click', function() {
-				debugger;
 				svg.selectAll(".yearLine").style("opacity",1);
 				d3.selectAll('input').property('checked', true);
 			});
-			checkboxAllRow.append('td').text('SelectAll');
-		//Draw DeselectAll
+			checkboxAllRow.append('td').text('SelectAll').style('font-weight','bold');
+		//Draw .
 		checkboxNoneRow
 			.append('td')
 			.attr('align','right')
@@ -265,13 +261,12 @@ function draw(data) {
 			.attr('id','cb_None')
 			.attr('type','button')
 			.on('click', function() {
-				debugger;
 				svg.selectAll(".yearLine").style("opacity",0);
 				d3.selectAll('input').property('checked', false);
 			});
-			checkboxNoneRow.append('td').text('DeselectAll');
+			checkboxNoneRow.append('td').text('DeselectAll').style('font-weight','bold');
 
-		//switchToViewerDriven();	
+		//switchToViewerDriven();	//is called post last year is drawn; uncomment for debugging to get to viewer driven directly
 
 		//"Activate" checkboxes, show all the years to start
 		function switchToViewerDriven() {
@@ -289,5 +284,4 @@ function draw(data) {
 			});
 			checkboxGrid.style('visibility','visible');
 	   	}
-
 }

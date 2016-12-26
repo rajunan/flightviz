@@ -47,12 +47,14 @@ I gathered feedback from three different people with varying knowledge and expos
 -- Apart from the legend which I will be integrating with the viewer driven narrative my reviwers did not have any futher inputs beyond the suggested changes.
 
 - Feedback Iteration 2 Viewer Driven Narrative - Initial:
--- Overall the ability to interact with the graphics was observed as a very ygood addition and made it more interesting for viewers
+-- *Overall* the ability to interact with the graphics was observed as a very ygood addition and made it more interesting for viewers
 -- *Viewer menu*: One reviewer did not intuitely try out the checkboxes. Added heading accordingly
 -- No other feedback or changes/updates were requested
 
 - Feedback Iteration 3 Final Final:
--- TBD
+-- *Overall* Comparing the decades mainly 1990s vs 2000 shows that in between 2000 to 2004 there is threefold jump in average departure delays. Especially the jump from 1999 to 2000 is significant (Y2K effect?). Further, the pronounced cyclical pattern of increase in average delays during year end and during mid of the year period starts to become more distintive from the late nineties.
+-- *Year label*: Make the year label as chart is animated more prominent
+-- *Viewer menu*: The heading on viewer menu to be bold to capture readers attention prodding them to play with the check boxes. 
 
 **Resources**
 [Flights data](http://stat-computing.org/dataexpo/2009/the-data.html)<br>

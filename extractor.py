@@ -14,9 +14,11 @@ import numpy as np
 write_mode = 'a' #For first pass dont append
 
 #file_in = ["data/2008 sample.csv", "data/2008 sample.csv"]
-file_in = [ "data/2008.csv", "data/2007.csv","data/2006.csv","data/2005.csv",
-            "data/2004.csv", "data/2003.csv","data/2002.csv","data/2001.csv",
-            "data/2000.csv"]
+file_in = [ "data/1988.csv", "data/1989.csv",
+            "data/1990.csv","data/1991.csv", "data/1992.csv","data/1993.csv","data/1994.csv",
+            "data/1995.csv", "data/1996.csv","data/1997.csv","data/1998.csv","data/1999.csv",
+            "data/2000.csv", "data/2001.csv","data/2002.csv","data/2003.csv","data/2004.csv",
+            "data/2005.csv", "data/2006.csv","data/2007.csv","data/2008.csv","data/2009.csv"]
 
 file_out = "data/flights by month.csv"
 

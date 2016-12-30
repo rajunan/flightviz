@@ -32,7 +32,7 @@ Step 2: provide reader to select a specific set of years to be able to observe t
 - Iteration 3 (final): Integrate and also update data for the full set (1988 to 2008). Note: I excluded 1987 given it has only three months of data
 
 **Feedback**
-I gathered feedback from three different people with varying knowledge and exposure to data vizualization and charts. In a first pass, I let the reader review on his own. Then (some readers requested additional run of the anminations) I checked how intuitive the charts were to them by letting them explain what they took away from the graphics. Subsequently I prodded them to explain what would have helped them to come to the conclusions earlier. What parts of the charts needed changes. Specific feedback provided is shown with each iteration.
+I gathered feedback from three different people with varying knowledge and exposure to data vizualization and charts. In a first pass, I let the reader review on his own. Then (some readers requested additional run of the anminations) I checked how intuitive the charts were to them by letting them explain what they took away from the graphics. Subsequently I prodded them to explain what would have helped them to come to the conclusions earlier. What parts of the charts needed changes. Specific feedback provided is shown with each iteration including 3.1 which was from Udacity project reviewer with further suggestions.
 
 - Feedback Iteration 1 Author Driven Narrative - Initial:
 -- *Overall*: Users intuitively understood the purpose of the chart. All observed the continues drop in average departure delay over the years. They also observed the broad pattern during the year with average delays being higher during year end holiday periods and then again during the summer.
@@ -55,6 +55,10 @@ I gathered feedback from three different people with varying knowledge and expos
 -- *Overall* Comparing the decades mainly 1990s vs 2000 shows that in between 2000 to 2004 there is threefold jump in average departure delays. Especially the jump from 1999 to 2000 is significant (Y2K effect?). Further, the pronounced cyclical pattern of increase in average delays during year end and during mid of the year period starts to become more distintive from the late nineties.
 -- *Year label*: Make the year label as chart is animated more prominent
 -- *Viewer menu*: The heading on viewer menu to be bold to capture readers attention prodding them to play with the check boxes. 
+
+- Feedback Iteration 3.1 Final Final:
+-- *Overall* Positive feedback given by Udacity reviewer: This is a really great submission. It's very close to meeting specifications. ... the one thing to work on is making the explanatory more obvious to the reader.
+-- *Updates done*: Grouped the years by average month on month delays. Two distinct periods are visible: 2000 to 2014 have a significantly higher average departure delays than the other years. Second observation I highlighted are the peak months during holiday seasons. I included brief para discussing my findings accordingly below the chart.
 
 **Resources**
 [Flights data](http://stat-computing.org/dataexpo/2009/the-data.html)<br>

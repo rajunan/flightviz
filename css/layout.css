@@ -7,17 +7,30 @@
     fill: none;
     stroke: black;
 }
-.axis text,
-table {
+.axis text {
    	font-family: sans-serif;
    	font-size: 12px;
    	text-anchor: middle;
 }
-.quarterSep {
+foottext {/*explainatory text*/
+    font-family: sans-serif;
+    font-size: 12px;
+}
+table {
+    font-family: sans-serif;
+    font-size: 12px;
+    text-anchor: middle;
+    visibility: hidden;
+}
+.quarterSeparator {
   fill: none;
   stroke-width: 0.5px;
   stroke: grey;
   stroke-dasharray: 8;
+}
+.peakMonthHighlight {
+  fill: rgb(204, 221, 255);
+  opacity: 0.3;
 }
 /* Styles for the main chart elements */
 .year {

@@ -20,13 +20,28 @@
 
 <body>
 	<g class = "axis"> <!--TODO clean up layout to avoid using axis class for labeling :-) -->
-		<text style="font-size: 9px"> Version 1.0.0: Feedback Iteration 3 Final Final </text>
+		<text style="font-size: 9px"> Version 1.1.0: Feedback Iteration 3.1 Final Final </text>
 	</g>
 	<div id="div_main">
 		<script type="text/javascript">
 			file = "data/flights by month.csv"			
 			d3.csv(file, parse, draw)
 		</script>
+	</div>
+	<div id="div_explainatory" style="visibility: hidden">
+		<foottext> 
+			Two clear findings can be observed: <br>
+			<ul>
+			<li>
+			Year on year comparison highlights a sudden increase from 2000 till 2004 compared to the rest of years in the data set.
+			<br>
+			This can be explained due to "Thunderstorms, surging air traffic and a dearth of new airport runways conspired to make 2000 the Year of the Flight Delay." Source: <a href="http://edition.cnn.com/2001/TRAVEL/NEWS/02/01/flight.delays/">CNN news report Record flight delays in 2000.</a>
+			As to why then from 2005 this "jump" is reversed can be explained in part thanks to <a href="https://fcw.com/Articles/1999/03/08/FAA-updates-plan-for-modernizing-nations-air-system.aspx"> modernization plans </a>by the Federal Aviation Administration (FAA) of air traffic management. Specifically in 2003 the <a href="https://en.wikipedia.org/wiki/Wide_Area_Augmentation_System"> Wide-Area Augmentation System (WAAS) </a> was activated for general aviation, covering 95% of the United States.
+			</li>
+			<br>
+			<li> 
+			The second observation is that a general pattern emerges where peak months have higher average delays. The peak months appear during the year end holiday season and then from May till August, which concides with <a href=https://en.wikipedia.org/wiki/School_holidays_in_the_United_States>summer break for schools in the United States.</a> 
+		</foottext>
 	</div>
 </body>
 </html>

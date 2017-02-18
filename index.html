@@ -20,7 +20,7 @@
 
 <body>
 	<g class = "axis"> <!--TODO clean up layout to avoid using axis class for labeling :-) -->
-		<text style="font-size: 9px"> Version 1.1.2: Feedback Iteration 3.1 Final Final </text>
+		<text style="font-size: 9px"> Version 1.2.0: Added 2016 year period and fixed data issues </text>
 	</g>
 	<div id="div_main">
 		<script type="text/javascript">
@@ -30,17 +30,39 @@
 	</div>
 	<div id="div_explainatory" style="visibility: hidden">
 		<foottext> 
-			Two clear findings can be observed: <br>
+			Few observations to highlight: <br>
 			<ul>
 			<li>
-			Year on year comparison highlights a sudden increase from 2000 till 2004 compared to the rest of years in the data set.
+			In the 1990s, departure delays steadily increase and peak in the year 2000.
 			<br>
-			This can be explained due to "Thunderstorms, surging air traffic and a dearth of new airport runways conspired to make 2000 the Year of the Flight Delay." Source: <a href="http://edition.cnn.com/2001/TRAVEL/NEWS/02/01/flight.delays/">CNN news report Record flight delays in 2000.</a>
-			As to why then from 2005 this "jump" is reversed can be explained in part thanks to <a href="https://fcw.com/Articles/1999/03/08/FAA-updates-plan-for-modernizing-nations-air-system.aspx"> modernization plans </a>by the Federal Aviation Administration (FAA) of air traffic management. Specifically in 2003 the <a href="https://en.wikipedia.org/wiki/Wide_Area_Augmentation_System"> Wide-Area Augmentation System (WAAS) </a> was activated for general aviation, covering 95% of the United States.
+			This can be explained due to "Thunderstorms, surging air traffic and a dearth of new airport runways conspired to make 2000 the Year of the Flight Delay." Source: <a href="http://edition.cnn.com/2001/TRAVEL/NEWS/02/01/flight.delays/">CNN news report Record flight delays in 2000.
 			</li>
-			<br>
+
 			<li> 
-			The second observation is that a general pattern emerges where peak months have higher average delays. The peak months appear during the year end holiday season and then from May till August, which concides with <a href=https://en.wikipedia.org/wiki/School_holidays_in_the_United_States>summer break for schools in the United States.</a> 
+			A general pattern emerges of peak months of departure delays over the Christmas and summer period. 
+ 			<br> The peak months appear during the year-end holiday season and then from May till August, which coincides with <a href=https://en.wikipedia.org/wiki/School_holidays_in_the_United_States>summer break for schools in the United States.</a>
+			</li> 
+
+			<li>
+			There is significant improvement starting 2002 and leading into 2003 with lowest average departure delays recorded.
+			<br>
+			This can be explained in part thanks to <a href="https://fcw.com/Articles/1999/03/08/FAA-updates-plan-for-modernizing-nations-air-system.aspx">modernization plans </a>by the Federal Aviation Administration (FAA) of air traffic management. 
+			<br> Specifically, in 2003 the <a href="https://en.wikipedia.org/wiki/Wide_Area_Augmentation_System"> Wide-Area Augmentation System (WAAS) </a> was activated for general aviation, covering 95% of the United States.
+			<br> Note: another factor which needs to be correlated properly is the impact on air traffic post the 9/11 attack possibly due to lower passenger volumes.
+
+			</li>
+
+			<li>
+			There is a particularly erratic pattern over the new year period compared to the rest of the months on year on year basis. 
+			<br>
+			For example, 2014 Jan has the highest average departure delay ever recorded. The next significant spike is during the Jan month is 1999. Further review is required to see if any specific one-off event occurs triggering these erratic patterns in Jan (freak weather patterns maybe?)
+			</li>
+
+
+			<li>
+			Though the average departure delay remains more or less within the banded ranges, the standard deviation is increasing over the years (not shown here but I have analyzed this separately). Will be interesting to analyze the spread across the airports/airlines and work in progress.
+			</li>
+
 		</foottext>
 	</div>
 </body>

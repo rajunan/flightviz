@@ -11,14 +11,16 @@ The data set which contains information on United State flight delays and perfor
 **Design**
 I started off first to understand the data provided. I initially tried to read the data using d3 to test the limits and as expected d3 is a visualization tool and not data munging (2008.csv file e.g. is ~650MB large). Hence I used pandas to crunch the data and used excel to render first static charts (see extractor.py and jpegs of the two excel charts). For the initial data set I choose the 2000 to 2008 year set. My code was data driven meaning that adding addl. years would not require recoding.
 
-To show trends I opted for time series chart which would best capture possible changing dynamics in flight performance as a starting point.
+To show trends, I opted for time series chart which would best capture possible changing dynamics in flight performance as a starting point.
 Initially I wanted to show yearly trends of average flight departure delays grouped by US states. But the first sketch showed a very busy diagram 
 ![sketch1](sketch1_dep_delay_by_state.jpg "Initial design approach")
 Also animating this over the course of the years would be impractical to render and not have much value to the reader. Note: One approach would be to use a choropleth map with discrete color scale to show delay variations and animate over the years.
 
 However wanting to stick to time series chart, I decided to show the trend across the US and not by state. Sketch for 2007 and 2008:
 ![sketch2](sketch2_dep_delay_US_avg.jpg "Finalized design approach")
-Note: Additionally and given I am showing averages across a large dataset I reviewed std deviation. A more interesting design would be to plot the std dev for each month as “halo” around the average monthly delay. This would make it more interesting to discren the mean.
+Note 1: Additionally and given I am showing averages across a large dataset I reviewed std deviation. A more interesting design would be to plot the std dev for each month as “halo” around the average monthly delay. This would make it more interesting to discren the mean.
+Note 2: Plotting the standard deviation across the months clearly indicates an increase in variation across airports. However this is not the case for mean delays. This suggests an inconsistency in how depature delays are being managed.
+![sketch4](sketch4_sigma_trend.jpg "Standard deviation trends")
 
 For the viewer driven part of my visualization viewer selection of specific years will be enabled. This would also function as the legend.
 ![sketch3](sketch3_viewer_driven.jpg "Viewer driven sketch")

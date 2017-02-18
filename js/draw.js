@@ -154,11 +154,11 @@ function draw(data) {
 
 	//Prepare chart objects ************************************************************************************************************************
     	var years = []; //all years in dataset
-    	var bad = 'rgb(255, 212, 128)', worse = 'rgb(255, 153, 128)',
+    	var defaultCol = 'rgb(255, 212, 128)', markerCol = 'rgb(255, 153, 128)', currentCol = 'rgb(66, 134, 244)'
     		yearColors = { 
-    			//color mappings to year lines; default if not specified; TODO: push to CSS rather hardcode
-    			'default' : bad,  //base color
-    			'2000' : worse, '2001' : worse, '2002' : worse,'2003' : worse, '2004' : worse},
+    			//color mappings to year lines; default if not specified; TODO: push to CSS rather than hardcode
+    			'default' : defaultCol,  //base color
+    			'2000' : markerCol, '2003' : markerCol, '2016' : currentCol },
     		yearColor = function(y) {
 				if (yearColors[y]) {
 					return yearColors[y];
@@ -231,7 +231,7 @@ function draw(data) {
 	   			.text(viewerTitle).style('font-weight','bold');
 			checkboxGrid.append('tr').append('td').attr('colspan',4).style('font-size','10px').style('font-style','italic')
 				.append("a")
-				.attr("href","README.html")
+				.attr("href","README.html	(")
 				.attr("target","_blank")
 				.text(viewerNote);			
 		var checkboxTitleRow = checkboxGrid.append('tr'), //second row 
@@ -264,6 +264,7 @@ function draw(data) {
 		checkboxYearsSetup(checkboxYearsRow.append('td').append('table'), 1980);
 		checkboxYearsSetup(checkboxYearsRow.append('td').append('table'), 1990);
 		checkboxYearsSetup(checkboxYearsRow.append('td').append('table'), 2000);
+		checkboxYearsSetup(checkboxYearsRow.append('td').append('table'), 2010);
 		checkboxYearsRow.append('td').attr('width','200px'); // additional column for spacing
 		//Draw SelectAll
 		checkboxAllRow

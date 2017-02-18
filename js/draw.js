@@ -231,7 +231,7 @@ function draw(data) {
 	   			.text(viewerTitle).style('font-weight','bold');
 			checkboxGrid.append('tr').append('td').attr('colspan',4).style('font-size','10px').style('font-style','italic')
 				.append("a")
-				.attr("href","README.html	(")
+				.attr("href","README.html")
 				.attr("target","_blank")
 				.text(viewerNote);			
 		var checkboxTitleRow = checkboxGrid.append('tr'), //second row 
